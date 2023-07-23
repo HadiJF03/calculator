@@ -1,5 +1,3 @@
-console.log("hello")
-
 function add(a,b){
     return a+b;
 }
@@ -30,3 +28,13 @@ function operate(num1, op, num2){
     }  
 }
 let num1,num2,op;
+let display = "";
+const numButtons = document.querySelectorAll(".numbers");
+const screen = document.querySelector(".screen");
+
+
+numButtons.forEach(button => button.addEventListener("click",(e) =>{
+    display += e.target.textContent;
+    screen.textContent = display;
+    
+}));
