@@ -1,5 +1,6 @@
 html,body{
     background-color: rgb(165, 204, 202);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
     display:flex;
@@ -15,10 +16,9 @@ body{
     justify-content: flex-start;
     border-style: solid;
 }
-.screen{
+.screen-container{
     display: flex;
-    justify-content: end;
-    align-items: flex-end;  
+    flex-direction: column;  
     margin: 0 auto 10px;
     background-color: aliceblue;
     width:500px;
@@ -27,6 +27,25 @@ body{
     border-style: solid;
     font-size: 90px;
 }
+.screen{
+    display: flex;
+    font-size: 50px;
+    border-radius: 15px 15px 0px;
+    background-color: #ffffff;
+    height:60px;
+    width: inherit;
+    overflow-x: auto;
+}
+.outcome{
+    border-radius: 15px;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+    background-color: inherit;
+    width: inherit;
+    height: 140px;
+}
 .button-container{
     display: flex;
     flex-wrap: wrap;
@@ -34,6 +53,7 @@ body{
     width: 500px;
 }
 .button{
+    transition: all 2s;
     background-color: #c56259;
     margin-bottom: 10px;
     font-size: xxx-large;
@@ -44,5 +64,8 @@ body{
     border-color: azure;
     width: 120px;
     height: 120px;
+}
+.active{
+    border-color: #c56259;
 }
 
