@@ -95,3 +95,8 @@ clearButton.addEventListener("click",function(e){
 allButtons.forEach(button=> button.addEventListener("click",function(e){
     e.target.classList.add("active");
 }));
+
+allButtons.forEach(button=> button.addEventListener("transitionend",function(e){
+    e.target.classList.remove("active");
+}));
+
